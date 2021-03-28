@@ -322,9 +322,10 @@ static inline CGFloat radiansToDegrees(CGFloat radians) {
       return;
     }
     // The player may be initialized but still needs to determine the duration.
-    if ([self duration] == 0) {
-      return;
-    }
+// FIXME [tadevel]: disabled to avoid live streaming getting stuck
+//    if ([self duration] == 0) {
+//      return;
+//    }
 
     _isInitialized = true;
     _eventSink(@{
